@@ -1,5 +1,6 @@
+## EX.NO:
+## DATE:
 ## SECURE HASH FUNCTION (SHA)
-## DATE :
 ## AIM:
 Develop a program to implement Secure Hash Algorithm (SHA-1)
 ## SECURED HASH ALGORITHM-1 (SHA-1):
@@ -52,7 +53,7 @@ Output:
 H0, H1, H2, H3, H4, H5: Word buffers with final message digest
 ```
 ## PROGRAM
-```
+```java
 import java.security.*;
 public class SHA1 {
 public static void main(String[] a) {
@@ -92,25 +93,19 @@ return buf.toString(); }
 }
 ```
 ## OUTPUT:
-```
-C:\Program Files\Java\jdk1.6.0_20\bin>javac SHA1.java
-C:\Program Files\Java\jdk1.6.0_20\bin>java SHA1
-Message digest object info:
-Algorithm = SHA1
-Provider = SUN version 1.6
-ToString = SHA1 Message Digest from SUN, <initialized>
-SHA1("") = DA39A3EE5E6B4B0D3255BFEF95601890AFD80709
-SHA1("abc") = A9993E364706816ABA3E25717850C26C9CD0D89D
-SHA1("abcdefghijklmnopqrstuvwxyz") =
-32D10C7B8CF96570CA04CE37F2A19D84240D3A89
-```
+
+![Screenshot (25)](https://github.com/Jothish741/Ex-04/assets/127813293/d0742f39-514d-4c92-b598-7856df4da6a7)
+
+
+
 ## RESULT:
 Thus SHA was implemented successfully.
 
 
 
 
-
+## EX.NO:
+## DATE:
 
   ## DIGITAL SIGNATURE STANDARD
 
@@ -129,7 +124,7 @@ STEP-6: Comparing this ‘y’ with actual y’s document, Alice concludes that 
 forgery.
 ```
 ## PROGRAM: (Digital Signature Standard)
-```
+```java
 import java.util.*;
 import java.math.BigInteger;
 class dsaAlg {
@@ -173,10 +168,8 @@ BigInteger p = getNextPrime("10600"); /* approximate
 prime */
 BigInteger q = findQ(p.subtract(one));
 BigInteger g = getGen(p,q,randObj);
-System.out.println(" \n simulation of Digital Signature
-Algorithm \n");
-System.out.println(" \n global public key components
-are:\n");
+System.out.println(" \n simulation of Digital SignatureAlgorithm \n");
+System.out.println(" \n global public key componentsare:\n");
 System.out.println("\np is: " + p);
 System.out.println("\nq is: " + q);
 System.out.println("\ng is: " + g);
@@ -204,27 +197,25 @@ BigInteger u1 = (hashVal.multiply(w)).mod(q);
 BigInteger u2 = (r.multiply(w)).mod(q);
 BigInteger v = (g.modPow(u1,p)).multiply(y.modPow(u2,p));
 v = (v.mod(p)).mod(q);
-System.out.println("\nverifying digital signature
-(checkpoints)\n:");
+System.out.println("\nverifying digital signature(checkpoints)\n:");
 System.out.println("w is : " + w);
 System.out.println("u1 is : " + u1);
 System.out.println("u2 is : " + u2);
 System.out.println("v is : " + v);
 if (v.equals(r))
 {
-System.out.println("\nsuccess: digital signature is
-verified!\n " + r);
+System.out.println("\nsuccess: digital signature isverified!\n " + r);
 }
 else
 {
-System.out.println("\n error: incorrect digital
-signature\n ");
+System.out.println("\n error: incorrect digitalsignature\n ");
 }
 }
 }
 ```
 ## OUTPUT:
-![image](https://github.com/IsaacAIML2023/Ex-04/assets/158465339/337034c5-ea1c-4332-a753-7c5b679325f2)
+![Screenshot (26)](https://github.com/Jothish741/Ex-04/assets/127813293/094dd8eb-d486-474a-838d-c03f88572973)
+
 
 ## RESULT:
 Thus program to implement the signature scheme named digital signature standard (Euclidean Algorithm) is implementeds successfully.
